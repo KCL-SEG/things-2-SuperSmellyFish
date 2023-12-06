@@ -1,3 +1,4 @@
+<!--This is my home.html:-->
 <html>
 <head>
   <title>Things</title>
@@ -7,5 +8,11 @@
     Things
   </h1>
   <p>Some stuff about things goes here.</p>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
